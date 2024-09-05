@@ -1,34 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Blog preview card</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <style>
+      body {
+        background-color: #f4d04e;
+        font-family: "Figtree";
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100%; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      }
+      .card-container {
+        border-radius: 20px;
+        border: 1px solid #111;
+        background: #fff;
+        box-shadow: 8px 8px 0px 0px #000;
+        max-width: 384px;
+        display: flex;
+        padding: 24px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin: 24px;
+      }
+      .image{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+      }
+      .image img {
+        border-radius: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        align-self: stretch;
+      }
+      .text-container .tag {
+        border-radius: 4px;
+        background: #f4d04e;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%;
+      }
+      .text-container .title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%;
+        margin: 0;
+      }
+      .text-container .body {
+        color: #6b6b6b;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+      .user-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="image"><img src="./assets/images/illustration-article.svg" alt="" /></div>
+        
+        <div class="text-container">
+          <div class="tag">Learning</div>
+          <div
+            style="
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 150%;
+            "
+          >
+            Published 21 Dec 2023
+          </div>
+          <h3 class="title">HTML & CSS foundations</h3>
+          <div class="body">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </div>
+        </div>
+        <div class="user-container">
+       
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="user profile picture"
+            width="32 px"
+            height="32 px"
+          />
+          <div
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 150%;
+            "
+          >
+            Greg Hooper
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/hibatabh" target="_blank">hiba tabhamate</a>.
+    </div>
+  </body>
 </html>
